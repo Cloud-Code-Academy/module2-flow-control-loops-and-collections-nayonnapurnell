@@ -45,8 +45,16 @@ public with sharing class FlowControlLoopsCollections {
      * @return true if the person is eligible to vote, false otherwise.
      */
     public static Boolean votingEligibility(Integer age) {
-        return null; // Replace null with the variable you used to store the result
-    }
+        Boolean isEligibleVoter = true;
+        Boolean notEligibleVoter = false;
+
+        if(age >= 18){
+            return isEligibleVoter;
+        }else{
+            return notEligibleVoter;
+        }        
+    }//End of the votingEligibility method.
+
 
     /**
      * Finds the maximum of two numbers.
