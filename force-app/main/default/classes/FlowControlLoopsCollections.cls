@@ -122,8 +122,14 @@ public with sharing class FlowControlLoopsCollections {
      * @return A string indicating whether the input is "Empty", "Null", or "Contains Text".
      */
     public static String checkString(String a) {
-        return null; // Replace null with the variable you used to store the result
-    }
+        if(a == null){
+            return 'Null';
+        }else if (a == ''){
+            return 'Empty';
+        }else{
+            return 'Contains Text';
+        }   
+    }//End of the checkString method.
 
     /**
      * Determines the grade based on the score.
