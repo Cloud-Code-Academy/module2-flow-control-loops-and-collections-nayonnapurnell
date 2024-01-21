@@ -165,14 +165,20 @@ public with sharing class FlowControlLoopsCollections {
      * @return The sum of all integers up to the limit.
      */
     public static Integer sumUpToLimit(Integer intLimit) {
-        /* 
-         for (){
-            
-         }
-        */
+        
+        Integer sumTotal = 1;
 
-        return null; // Replace null with the variable you used to store the result
-    }
+         for ( Integer i = 1; i < intLimit; i++){
+            if(intLimit == 0 || intLimit < 0){
+
+                sumTotal = 0;         
+            }else{
+                sumTotal = (i + 1) + sumTotal;
+            }         
+         }
+         return sumTotal;     
+    }//End of the sumUpToLimit method.
+        
 
     /**
      * Generate String "Hello World!" three times, with each occurrence separated by a semicolon.
