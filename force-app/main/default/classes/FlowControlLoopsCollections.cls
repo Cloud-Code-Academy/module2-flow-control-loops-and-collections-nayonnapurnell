@@ -168,13 +168,12 @@ public with sharing class FlowControlLoopsCollections {
         
         Integer sumTotal = 1;
 
-         for ( Integer i = 1; i < intLimit; i++){
-            if(intLimit == 0 || intLimit < 0){
+        if(intLimit == 0 || intLimit < 0){
+            return 0;         
+        }
 
-                sumTotal = 0;         
-            }else{
-                sumTotal = (i + 1) + sumTotal;
-            }         
+         for ( Integer i = 1; i < intLimit; i++){
+                sumTotal = (i + 1) + sumTotal;       
          }
          return sumTotal;     
     }//End of the sumUpToLimit method.
@@ -207,18 +206,20 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static String repeatString(String inputString, Integer repeatCount) {
         // Initialize the result String
-
-        // Use a for loop to append the inputString to the result string repeatCount times
-        /*
-        for () {
-
-            // If it is not the last iteration, add a semicolon to separate the strings
+        String stringResult = '';
+    
+        for (Integer i = 1; i <= repeatCount; i++) {
+            if(i < repeatCount){
+                stringResult +=inputString + '; ';
+                continue;
+            }
+            if(i == repeatCount){
+                stringResult +=inputString;
+                break;
+            }           
         }
-        */
-
-        // Return the final result string
-        return null; // Replace null with the variable you used to store the result
-    }
+        return stringResult;
+    }//End of the repeatString method.
 
     /**
      * Creates a List of integers and adds the integers 1, 2, and 3 to it.
