@@ -262,16 +262,16 @@ public with sharing class FlowControlLoopsCollections {
      * @return A List of integers from 1 to 'n'.
      */
     public static List<Integer> createIntegerList(Integer n) {
-        // Create a new list of integers 
+        
+        // List of integers based on input parameter
+        List<Integer> integerList = new List<Integer>();
 
-        /*
-        for() {
+        for(Integer i = 1; i <= n; i++) {
             //add integer to the list
-        }
-        */ 
-
-        return null; // Replace null with the variable you used to store the result
-    }
+            integerList.add(n + (i-n)); 
+        }      
+        return integerList;
+    }//End of the createIntegerList method.
 
     /**
      * Remove duplicate values from the list of Strings.
