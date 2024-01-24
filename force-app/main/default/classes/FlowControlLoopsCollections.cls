@@ -228,15 +228,15 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static List<Integer> createAndPopulateList() {
         // Create a new list of integers
+        List<Integer> populatedList = new List<Integer>();
 
-        // Add the integers 1, 2, and 3 to the list
-        // add 1
-        // add 2
-        // add 3
+        populatedList.add(1);
+        populatedList.add(2);
+        populatedList.add(3);
 
         // Return the populated list
-        return null; // Replace null with the variable you used to store the result
-    }
+        return populatedList; 
+    }//End of the createAndPopulateList method.
 
     /**
      * Creates a List of integers and adds the integers from 1 to 5. Then it removes the number 3 from the list.
