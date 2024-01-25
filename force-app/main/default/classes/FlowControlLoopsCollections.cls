@@ -298,12 +298,28 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static Integer sumPositiveIntegers() {
         List<Integer> numbers = new List<Integer>{-1, 2, -3, 4, -5, 6}; //DO NOT CHANGE
+        List<Integer> positiveNumbers = new List<Integer>();
+        Integer sumPositiveNumbers = 0;
 
-        // Loop through the list of integers
-            // if the number is negative skip this iteration
-        
+        //Loop through the numbers list.
+        //remove the postive numbers and add them to the Integer list.
+        //Iterate through the positive list.
+        //Add the positive list together.
 
-        return null; // Replace null with the variable you used to store the result
+        for(Integer i = 0; i < numbers.size(); i++){
+            if(numbers[i] > 0){
+              System.debug('The List of Positive Numbers' + numbers[i]);
+              positiveNumbers.add(numbers[i]);
+              System.debug('The New List of Positive Numbers' + positiveNumbers);
+            }
+        }
+        for(Integer i = 0; i < positiveNumbers.size(); i++){
+            System.debug('***The Final List of Positive Numbers' + positiveNumbers);
+            sumPositiveNumbers += positiveNumbers[i];
+            System.debug('***The Sum of Positive Numbers' + sumPositiveNumbers);
+          }
+          
+        return sumPositiveNumbers; 
     }//End of the sumPositiveIntegers method.
 
     /**
