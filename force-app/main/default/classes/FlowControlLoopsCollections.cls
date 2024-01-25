@@ -284,10 +284,12 @@ public with sharing class FlowControlLoopsCollections {
         // Create a new Set of strings
         Set<String> stringSet = new Set<String>();
 
-        //add strings to the set
+        //Find duplicates from the list of Strings
+        stringSet.addAll(inputList);
+       
+        return stringSet; 
 
-        return null; // Replace null with the variable you used to store the result
-    }
+    }//End of the createStringSet method.
 
     /**
      * Iterates over a list of integers and sums only the positive integers.
@@ -302,7 +304,7 @@ public with sharing class FlowControlLoopsCollections {
         
 
         return null; // Replace null with the variable you used to store the result
-    }
+    }//End of the sumPositiveIntegers method.
 
     /**
      * Iterates over a list of strings and searches for a specific word. Once found, it breaks the loop.
@@ -318,7 +320,7 @@ public with sharing class FlowControlLoopsCollections {
             // If the current word is the word to find, exit the loop
 
         return null; // Replace null with the variable you used to store the result
-    }
+    }//End of the findWordInList method.
 
     /**
      * Loop through the list of money and adds them up until it accumulates more than 40 and then stops counting.
@@ -331,7 +333,7 @@ public with sharing class FlowControlLoopsCollections {
         List<Decimal> moneyInWallet = new List<Decimal>{0.50, 10, 3.84, 24.60, 9.08, 50, 4.90}; //DO NOT CHANGE
 
         return null; // Replace null with the variable you used to store the result
-    }
+    }//End of the countMoney method.
 
     /**
      * Create a map that has five key-value pairs to the map, where the keys are the names of fruits and the values are their quantities.
@@ -349,7 +351,7 @@ public with sharing class FlowControlLoopsCollections {
         // add Grapes => 25
 
         return null; // Replace null with the variable you used to store the result
-    }
+    }//End of the addItemsToMap method.
 
     /**
      * Create a map where the keys are the names of employees and the values are their salaries.
@@ -372,7 +374,7 @@ public with sharing class FlowControlLoopsCollections {
 
         // Return the salary of the employee, or null if the employee is not found in the Map
         return null; // Replace null with the variable you used to store the result
-    }
+    }//End of the getSalary method.
 
     /**
      * Create a map where the keys are the names of employees and the values are their salaries.
@@ -401,6 +403,6 @@ public with sharing class FlowControlLoopsCollections {
 
         // Return the list of high paid employees
         return null; // Replace null with the variable you used to store the result
-    }
+    }//End of the getHighPaidEmployees method.
 
 }
