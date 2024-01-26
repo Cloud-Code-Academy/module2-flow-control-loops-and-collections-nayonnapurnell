@@ -402,17 +402,31 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static Integer getSalary(String employeeName) {
         // Initialize a Map
+        Map<String,Integer> employeeSalaryMap = new Map<String,Integer>();
+        Integer employeeSalary = 20000;
 
         // Add key-value pairs to the Map
         // add John Doe => 50000
+        employeeSalaryMap.put('John Doe', 50000);
         // add Jane Smith => 60000
+        employeeSalaryMap.put('Jane Smith', 60000);
         // add Sam Brown => 55000
+        employeeSalaryMap.put('Sam Brown', 55000);
         // add Alice Johnson => 65000
+        employeeSalaryMap.put('Alice Johnson', 65000);
 
         // Get the salary of the employee
+        for(Integer i = 0; i<employeeSalaryMap.size(); i++){
+            if(employeeSalaryMap.keySet() == null){
+                employeeSalary = null;
+            }  
+            else{
+                employeeSalary = employeeSalaryMap.get(employeeName);
+            }
+          }
 
         // Return the salary of the employee, or null if the employee is not found in the Map
-        return null; // Replace null with the variable you used to store the result
+        return employeeSalary;
     }//End of the getSalary method.
 
     /**
