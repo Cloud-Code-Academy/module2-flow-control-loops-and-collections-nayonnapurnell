@@ -318,7 +318,7 @@ public with sharing class FlowControlLoopsCollections {
             sumPositiveNumbers += positiveNumbers[i];
             System.debug('***The Sum of Positive Numbers' + sumPositiveNumbers);
           }
-          
+
         return sumPositiveNumbers; 
     }//End of the sumPositiveIntegers method.
 
@@ -331,11 +331,20 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static Integer findWordInList(String wordToFind, List<String> words) {
         // The variable to store the index of the word
+       Integer indexString = -1;
 
         // Loop through the list of words
             // If the current word is the word to find, exit the loop
-
-        return null; // Replace null with the variable you used to store the result
+            for(Integer i = 0; i < words.size(); i++){
+                if(words[i] == wordToFind){
+                    indexString = i;                        
+                }else if(words.contains(wordToFind) == false){
+                    return indexString; 
+                }else{
+                    break;
+                }
+            }
+        return indexString;
     }//End of the findWordInList method.
 
     /**
@@ -420,5 +429,4 @@ public with sharing class FlowControlLoopsCollections {
         // Return the list of high paid employees
         return null; // Replace null with the variable you used to store the result
     }//End of the getHighPaidEmployees method.
-
 }
