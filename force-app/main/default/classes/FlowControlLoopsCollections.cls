@@ -28,7 +28,7 @@ public with sharing class FlowControlLoopsCollections {
      * @return "Hello World!" if x greater than y, otherwise return null.
      */
     public static String helloWorld(Integer x, Integer y) {
-        if(x <= y || x == null || y == null){
+        if(x == null || y == null || x <= y  ){
             return null;
         }else{
             String helloWorld = 'Hello World!';
@@ -70,8 +70,6 @@ public with sharing class FlowControlLoopsCollections {
 
         if(num1 == null ||num2 == null){
             return null;
-        }else if(num1 == num2){
-            return num1;
         }else{
             largestNum = Math.max(num1,num2);
             return largestNum;
@@ -206,7 +204,7 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static String repeatString(String inputString, Integer repeatCount) {
         // Initialize the result String
-        String stringResult = '';
+        String stringResult = ' ';
     
         for (Integer i = 1; i <= repeatCount; i++) {
             if(i < repeatCount){
