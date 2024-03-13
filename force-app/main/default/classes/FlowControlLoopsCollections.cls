@@ -204,19 +204,16 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static String repeatString(String inputString, Integer repeatCount) {
         // Initialize the result String
-        String stringResult = ' ';
+        String stringResult = '';
     
-        for (Integer i = 1; i <= repeatCount; i++) {
-            if(i < repeatCount){
-                stringResult +=inputString + '; ';
-                continue;
-            }
-            if(i == repeatCount){
-                stringResult +=inputString;
-                break;
-            }           
+        for (Integer i = 0; i < repeatCount ; i++) {
+            stringResult +=inputString;
+            if(i != (repeatCount -1)){
+                stringResult +='; ';
+            }         
         }
         return stringResult;
+
     }//End of the repeatString method.
 
     /**
